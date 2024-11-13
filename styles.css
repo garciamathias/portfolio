@@ -15,21 +15,6 @@
     --cyber-gray: #444;
     --cyber-white: #fff;
     --nav-height: 80px;
-    --light-bg-color: #f0f0f0;
-    --light-text-color: #0a0a0a;
-    --light-glass-bg: rgba(255, 255, 255, 0.7);
-    --light-glass-border: rgba(0, 0, 0, 0.1);
-    --light-cyber-black: #ffffff;
-    --light-cyber-blue: #0088cc;
-}
-
-[data-theme="light"] {
-    --bg-color: var(--light-bg-color);
-    --text-color: var(--light-text-color);
-    --glass-bg: var(--light-glass-bg);
-    --glass-border: var(--light-glass-border);
-    --cyber-black: var(--light-cyber-black);
-    --cyber-blue: var(--light-cyber-blue);
 }
 
 * {
@@ -811,53 +796,3 @@ body {
       left: -1rem;
     }
   }
-
-  /* Theme toggle button */
-.theme-toggle {
-    margin-left: 2rem;
-}
-
-.toggle-button {
-    background: transparent;
-    border: 2px solid var(--cyber-blue);
-    padding: 0.5rem 1rem;
-    color: var(--cyber-blue);
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-}
-
-.toggle-icon {
-    width: 16px;
-    height: 16px;
-    border: 2px solid var(--cyber-blue);
-    border-radius: 50%;
-    position: relative;
-    transition: all 0.3s;
-}
-
-[data-theme="light"] .toggle-icon {
-    background: var(--cyber-blue);
-}
-
-.toggle-button:hover {
-    background: var(--cyber-blue);
-    color: var(--cyber-black);
-}
-
-.toggle-button:hover .toggle-icon {
-    border-color: var(--cyber-black);
-}
-
-/* Animation for theme transition */
-body {
-    transition: background-color 0.3s, color 0.3s;
-}
