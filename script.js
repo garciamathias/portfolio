@@ -10,7 +10,8 @@ const DOM = {
     sections: document.querySelectorAll('section'),
     navLinks: document.querySelectorAll('.nav-link'),
     menuBtn: document.querySelector('.menu-btn'),
-    navLinksContainer: document.querySelector('.nav-links-container')
+    navLinksContainer: document.querySelector('.nav-links-container'),
+    aboutCards: document.querySelectorAll('.about-card')
 };
 
 // Configuration globale
@@ -120,6 +121,10 @@ const Effects3DManager = {
 
         DOM.tags.forEach(tag => {
             this.apply3DToTag(tag);
+        });
+
+        DOM.aboutCards.forEach(card => {
+            this.apply3DEffect(card);
         });
     },
 

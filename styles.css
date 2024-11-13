@@ -15,7 +15,11 @@
     --cyber-gray: #444;
     --cyber-white: #fff;
     --nav-height: 80px;
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+    --rotate: 132deg;
 }
+
 
 * {
     margin: 0;
@@ -231,6 +235,9 @@ body {
     text-shadow: 0.05em 0 0 var(--primary-color),
                 -0.05em 0 0 var(--secondary-color);
     animation: glitch 1s infinite;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 @keyframes glitch {
@@ -796,3 +803,320 @@ body {
       left: -1rem;
     }
   }
+
+  /* About Section Styles */
+.about-section {
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        var(--bg-color),
+        rgba(10, 10, 10, 0.95)
+    );
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    color: var(--cyber-blue);
+    text-shadow: 0 0 10px var(--cyber-blue);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 4rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-card {
+        padding: 1.5rem;
+    }
+}
+
+.glitch-2 {
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-shadow: 0.05em 0 0 var(--primary-color),
+                -0.05em 0 0 var(--secondary-color);
+    animation: shake 0.6s linear infinite;
+  }
+  
+  .glitch-2::before,
+  .glitch-2::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+  }
+  
+  .glitch-2::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--primary-color);
+    animation: glitch-2-anim-1 2s infinite linear alternate-reverse;
+  }
+  
+  .glitch-2::after {
+    left: -2px;
+    text-shadow: 2px 0 var(--secondary-color);
+    animation: glitch-2-anim-2 3s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-2-anim-1 {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+      transform: translate(-2px);
+    }
+    10% {
+      clip-path: polygon(0 20%, 100% 20%, 100% 65%, 0 65%);
+      transform: translate(2px);
+    }
+    20% {
+      clip-path: polygon(0 40%, 100% 40%, 100% 85%, 0 85%);
+      transform: translate(-2px);
+    }
+    30% {
+      clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+      transform: translate(2px);
+    }
+    40% {
+      clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
+      transform: translate(-2px);
+    }
+    50% {
+      clip-path: polygon(0 100%, 100% 100%, 100% 70%, 0 70%);
+      transform: translate(2px);
+    }
+    60% {
+      clip-path: polygon(0 80%, 100% 80%, 100% 50%, 0 50%);
+      transform: translate(-2px);
+    }
+    70% {
+      clip-path: polygon(0 60%, 100% 60%, 100% 30%, 0 30%);
+      transform: translate(2px);
+    }
+    80% {
+      clip-path: polygon(0 40%, 100% 40%, 100% 10%, 0 10%);
+      transform: translate(-2px);
+    }
+    90% {
+      clip-path: polygon(0 20%, 100% 20%, 100% 0, 0 0);
+      transform: translate(2px);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes glitch-2-anim-2 {
+    0% {
+      clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
+      transform: translate(2px);
+    }
+    15% {
+      clip-path: polygon(0 35%, 100% 35%, 100% 50%, 0 50%);
+      transform: translate(-2px);
+    }
+    30% {
+      clip-path: polygon(0 55%, 100% 55%, 100% 70%, 0 70%);
+      transform: translate(2px);
+    }
+    45% {
+      clip-path: polygon(0 75%, 100% 75%, 100% 90%, 0 90%);
+      transform: translate(-2px);
+    }
+    60% {
+      clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+      transform: translate(2px);
+    }
+    75% {
+      clip-path: polygon(0 65%, 100% 65%, 100% 80%, 0 80%);
+      transform: translate(-2px);
+    }
+    90% {
+      clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
+      transform: translate(2px);
+    }
+    100% {
+      clip-path: polygon(0 25%, 100% 25%, 100% 40%, 0 40%);
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translate(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translate(-1px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translate(1px);
+    }
+  }
+  
+  /* Effet de survol */
+  .glitch-2:hover {
+    animation: none;
+    text-shadow: 
+      0 0 5px var(--primary-color),
+      0 0 10px var(--primary-color),
+      0 0 15px var(--primary-color),
+      0 0 20px var(--secondary-color);
+  }
+  
+  .glitch-2:hover::before,
+  .glitch-2:hover::after {
+    animation: none;
+    opacity: 0;
+  }
+
+/* Container des cartes */
+.about-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Style de base des cartes */
+.about-card {
+    position: relative;
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(51, 204, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+/* Titre de la carte */
+.about-card .card-title {
+    color: var(--cyber-blue);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+/* Ligne sous le titre */
+.about-card .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--cyber-blue);
+    transition: width 0.3s ease;
+}
+
+/* Contenu de la carte */
+.about-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Effet de lueur de bordure */
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(51, 204, 255, 0.3),
+        transparent
+    );
+    mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                 linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Effets au survol */
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-card:hover::before {
+    opacity: 1;
+}
+
+.about-card:hover .card-title::after {
+    width: 100%;
+}
+
+.about-card:hover p {
+    opacity: 1;
+}
+
+/* Animation d'entrée */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-card {
+    opacity: 0;
+    animation: cardFadeIn 0.6s ease forwards;
+}
+
+.about-card:nth-child(1) { animation-delay: 0.2s; }
+.about-card:nth-child(2) { animation-delay: 0.4s; }
+.about-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-cards-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .about-card .card-title {
+        font-size: 1.2rem;
+    }
+}
