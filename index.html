@@ -6,7 +6,6 @@
     <title>Portfolio Créatif</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="cursor"></div>
@@ -14,60 +13,93 @@
 
     <div class="noise"></div>
     
-    <nav class="glass-nav">
-        <div class="nav-content">
-            <div class="logo">
-                <span class="gradient-text">Votre Nom</span>
+    <nav class="cyber-nav">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <div class="cyber-logo">
+                    <div class="logo-hex">
+                        <span class="logo-text">MG</span>
+                        <div class="hex-border"></div>
+                    </div>
+                </div>
             </div>
-            <div class="menu-btn">
-                <div class="menu-btn__burger"></div>
+
+            <div class="nav-menu">
+                <div class="menu-background">
+                    <div class="menu-gradient"></div>
+                </div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#home" class="cyber-link">
+                            <span class="link-bracket">[</span>
+                            <span class="link-text">HOME</span>
+                            <span class="link-bracket">]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="cyber-link">
+                            <span class="link-bracket">[</span>
+                            <span class="link-text">ABOUT</span>
+                            <span class="link-bracket">]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="cyber-link">
+                            <span class="link-bracket">[</span>
+                            <span class="link-text">PROJECTS</span>
+                            <span class="link-bracket">]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="cyber-link">
+                            <span class="link-bracket">[</span>
+                            <span class="link-text">BLOG</span>
+                            <span class="link-bracket">]</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link">Accueil</a>
-                <a href="#about" class="nav-link">À propos</a>
-                <a href="#projects" class="nav-link">Projets</a>
-                <a href="#blog" class="nav-link">Blog</a>
+
+            <div class="nav-status">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">ONLINE</span>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="home" class="hero">
+        <header id="home" class="hero">
             <div class="hero-content">
                 <h1 class="glitch" data-text="Mathias Garcia">Mathias Garcia</h1>
-                <p class="subtitle">Étudiant à HEC Paris • Passionné de Tech • Entrepreneur</p>
+                <p class="subtitle">HEC Paris</p>
                 
                 <div class="expertise-tags">
-                    <span class="tag">Media Buying</span>
-                    <span class="tag">IA & DeepTech</span>
-                    <span class="tag">Marketing Digital</span>
-                    <span class="tag">Entrepreneuriat</span>
+                    <span class="tag">Energy</span>
+                    <span class="tag">AI & DeepTech</span>
+                    <span class="tag">Starts-up</span>
+                    <span class="tag">Ecological transition</span>
                 </div>
         
                 <div class="key-info">
                     <div class="info-card">
                         <i class="fas fa-graduation-cap"></i>
-                        <h3>Formation</h3>
-                        <p>HEC Paris - Master in Management</p>
-                        <p>University of Sydney - Exchange Program</p>
+                        <h3>Energy Enthusiast</h3>
+                        <p>I'm interested in wave power</p>
                     </div>
         
                     <div class="info-card">
                         <i class="fas fa-code"></i>
-                        <h3>Compétences Tech</h3>
-                        <p>Python • HTML/CSS • AI Training</p>
+                        <h3>Learning DeepTech</h3>
+                        <p>Python • HTML/CSS • LLM's • SQL</p>
                     </div>
         
                     <div class="info-card">
                         <i class="fas fa-globe"></i>
-                        <h3>Langues</h3>
+                        <h3>Languages</h3>
                         <p>Français • Anglais • Espagnol</p>
                     </div>
-                </div>
-        
-                <div class="scroll-indicator">
-                    <div class="mouse"></div>
-                    <p>Découvrez mon parcours</p>
                 </div>
             </div>
         
@@ -76,68 +108,16 @@
                 <div class="shape shape2"></div>
                 <div class="shape shape3"></div>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="glass-card">
-                <h2 class="section-title">À Propos</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Votre présentation captivante ici...</p>
-                    </div>
-                    <div class="skills">
-                        <div class="skill-item" data-skill="Design">
-                            <div class="skill-progress" data-progress="90"></div>
-                        </div>
-                        <div class="skill-item" data-skill="Développement">
-                            <div class="skill-progress" data-progress="85"></div>
-                        </div>
-                        <div class="skill-item" data-skill="Créativité">
-                            <div class="skill-progress" data-progress="95"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2 class="section-title">Projets</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <h3>Nom du Projet</h3>
-                        <p>Description du projet...</p>
-                        <a href="#" class="btn">Voir plus</a>
-                    </div>
-                </div>
-                <!-- Répétez pour plus de projets -->
-            </div>
-        </section>
-
-        <section id="blog" class="blog">
-            <h2 class="section-title">Blog</h2>
-            <div class="blog-grid">
-                <article class="blog-card glass-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <h3>Titre de l'article</h3>
-                        <p>Aperçu de l'article...</p>
-                        <a href="#" class="btn">Lire plus</a>
-                    </div>
-                </article>
-                <!-- Répétez pour plus d'articles -->
-            </div>
-        </section>
+        </header>
     </main>
 
     <footer class="glass-footer">
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/votre_compte" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/garciamathias" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/votre_profil" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2024 Votre Nom - Tous droits réservés</p>
+        <p>&copy; 2024 Garcia Mathias - Tous droits réservés</p>
     </footer>
 
     <script src="script.js"></script>
