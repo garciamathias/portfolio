@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathias Garcia</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- 2. Ensuite jQuery (toujours avant les autres scripts) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 3. Puis Typed.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+    
+    <!-- 4. Vos fichiers CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="solar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -101,16 +112,75 @@
                 <div class="shape shape2"></div>
                 <div class="shape shape3"></div>
             </div>
+
         </header>
+        
+        <section class="section about-section">
+            <div class="section-content">
+                <h1 class="glitch-2" data-text="About Me">About Me</h1>
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-button"></div>
+                    <div class="terminal-button"></div>
+                    <div class="terminal-button"></div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-prompt">
+                        <span class="terminal-text" id="terminal-text"></span>
+                        <span class="terminal-cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
-    <footer class="glass-footer">
-        <div class="social-links">
-            <a href="https://x.com/garciamathias_" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/garciamathias" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/mathias-garcia-a01047218/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-hex">
+                        <span class="logo-text">MG</span>
+                        <div class="hex-border"></div>
+                    </div>
+                </div>
+                <p class="footer-tagline">Building the future through technology and sustainability</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Connect</h3>
+                <div class="social-links">
+                    <a href="https://x.com/garciamathias_" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="https://github.com/garciamathias" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mathias-garcia-a01047218/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3 class="footer-heading">Expertise</h3>
+                <div class="footer-tags">
+                    <span class="footer-tag">Green Tech</span>
+                    <span class="footer-tag">AI & DeepTech</span>
+                    <span class="footer-tag">Starts-up</span>
+                    <span class="footer-tag">EdTech</span>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2024 Garcia Mathias - Tous droits réservés</p>
+        
+        <div class="footer-bottom">
+            <div class="footer-line"></div>
+            <p class="copyright">© 2024 Garcia Mathias - Tous droits réservés</p>
+            <div class="footer-status">
+                <span class="status-dot"></span>
+                <span class="status-text">SYSTEM ONLINE</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

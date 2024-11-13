@@ -10,7 +10,8 @@ const DOM = {
     sections: document.querySelectorAll('section'),
     navLinks: document.querySelectorAll('.nav-link'),
     menuBtn: document.querySelector('.menu-btn'),
-    navLinksContainer: document.querySelector('.nav-links-container')
+    navLinksContainer: document.querySelector('.nav-links-container'),
+    aboutCards: document.querySelectorAll('.about-card')
 };
 
 // Configuration globale
@@ -121,6 +122,10 @@ const Effects3DManager = {
         DOM.tags.forEach(tag => {
             this.apply3DToTag(tag);
         });
+
+        DOM.aboutCards.forEach(card => {
+            this.apply3DEffect(card);
+        });
     },
 
     apply3DEffect(element) {
@@ -201,3 +206,102 @@ const handleScroll = utils.debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', handleScroll);
+
+// Cartes
+const terminalContent = [
+    {
+        prompt: "cat my_journey.txt",
+        text: `My Journey
+
+Growing up fascinated by technology and sustainable development, I've always been driven by the desire to create positive impact through innovation. At HEC Paris, I've found the perfect intersection of business acumen and technological advancement.
+
+[Innovation] [Technology] [HEC Paris]`
+    },
+    {
+        prompt: "cat my_vision.txt",
+        text: `My Vision
+
+I believe in a future where technology and sustainability coexist harmoniously. My focus lies in developing and promoting solutions that leverage cutting-edge technology to address environmental challenges.
+
+[Green Tech] [AI] [Sustainability]`
+    },
+    {
+        prompt: "cat my_approach.txt",
+        text: `My Approach
+
+Combining analytical thinking with creative problem-solving, I tackle challenges through a multi-disciplinary lens. My experience in both technical and business domains bridges gaps between innovation and implementation.
+
+[Analytics] [Creativity] [Strategy]`
+    }
+];
+
+class Terminal {
+    constructor(elementId) {
+        this.element = document.getElementById(elementId);
+        this.currentContentIndex = 0;
+        this.isTyping = false;
+    }
+
+    async typeText(text, speed = 30) {
+        this.isTyping = true;
+        let index = 0;
+
+        return new Promise((resolve) => {
+            const interval = setInterval(() => {
+                if (index < text.length) {
+                    this.element.textContent += text.charAt(index);
+                    index++;
+                } else {
+                    clearInterval(interval);
+                    this.isTyping = false;
+                    resolve();
+                }
+            }, speed);
+        });
+    }
+
+    async eraseText(speed = 30) {
+        return new Promise((resolve) => {
+            const interval = setInterval(() => {
+                if (this.element.textContent.length > 0) {
+                    this.element.textContent = this.element.textContent.slice(0, -1);
+                } else {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, speed);
+        });
+    }
+
+    async displayContent() {
+        while (true) {
+            const content = terminalContent[this.currentContentIndex];
+            
+            // Type prompt
+            await this.typeText(content.prompt, 50);
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await this.eraseText(30);
+            
+            // Type content
+            await this.typeText(content.text, 30);
+            
+            // Wait before erasing
+            await new Promise(resolve => setTimeout(resolve, 3000));
+            
+            // Erase content
+            await this.eraseText(10);
+            
+            // Move to next content
+            this.currentContentIndex = (this.currentContentIndex + 1) % terminalContent.length;
+            
+            // Small pause before next iteration
+            await new Promise(resolve => setTimeout(resolve, 500));
+        }
+    }
+}
+
+// Initialize when document is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const terminal = new Terminal('terminal-text');
+    terminal.displayContent();
+});
